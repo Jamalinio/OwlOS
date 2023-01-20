@@ -32,6 +32,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
 "AllowTelemetry"=dword:00000000
+"AllowDeviceNameInTelemetry"=dword:00000000
+"MaxTelemetryAllowed"=dword:00000001
+"DoNotShowFeedbackNotifications"=dword:00000000
 
 ; disable send additional data to microsoft
 
@@ -114,19 +117,13 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\System\GameConfigStore]
 "GameDVR_FSEBehavior"=dword:00000002
 
-; network throttling index and system responsiveness
+; mcss
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
-"NetworkThrottlingIndex"=dword:ffffffff
-"SystemResponsiveness"=dword:00000000
-
-; games priorities
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
-"GPU Priority"=dword:00000008
-"Priority"=dword:00000006
-"Scheduling Category"="High"
-"SFIO Priority"="High"
+"NetworkThrottlingIndex"=dword:0000000a
+"SystemResponsiveness"=dword:0000000a
+"LazyModeTimeout"=dword:00003a98
+"NoLazyMode"=dword:00000001
 
 ; low desktop timeouts and auto end tasks
 
@@ -134,11 +131,16 @@ Windows Registry Editor Version 5.00
 "MenuShowDelay"="0"
 "AutoEndTasks"="1"
 
-; disable prefetcher and superfetch
+; disable prefetch and superfetch
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"EnablePrefetcher"=dword:00000000
+"EnableSuperfetch"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
 "EnablePrefetcher"=dword:00000000
 "EnableSuperfetch"=dword:00000000
+"SfTracingState"=dword:00000000
 
 ; set cpu usage to programs
 
@@ -191,15 +193,28 @@ Windows Registry Editor Version 5.00
 "EnableScripts"=dword:00000001
 "ExecutionPolicy"="RemoteSigned"
 
-; disable sticky keys
+; disable auto tray
 
-[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
-"Flags"="506"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000000
 
-; keyboard response flags
+; kbd flags
 
 [HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
-"Flags"="122"
+"AutoRepeatDelay"="0"
+"AutoRepeatRate"="0"
+"DelayBeforeAcceptance"="0"
+"Flags"="26"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
+"Flags"="26"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\TimeOut]
+"Flags"="2"
+"TimeToWait"="300000"
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\ToggleKeys]
+"Flags"="58"
 
 ; easy import power plan
 
@@ -265,27 +280,64 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "SettingsPageVisibility"="hide:usb;autoplay;remotedesktop;windowsupdate;windowsinsider;nfctransactions;mobile-devices;deviceencryption;troubleshoot;recovery;backup;findmydevice;windowsdefender;activation;tabletmode;project;speech;easeofaccess-magnifier;easeofaccess-narrator;easeofaccess-speechrecognition;easeofaccess-closedcaptioning;easeofaccess-eyecontrol;privacy;privacy-speech;privacy-speechtyping;privacy-feedback;privacy-activityhistory;privacy-location;privacy-callhistory;privacy-eyetracker;privacy-messaging;privacy-automaticfiledownloads;windowsupdate;windowsdefender;backup;recovery;findmydevice;windowsinsider;;holographic-audio;privacy-holographic-environment;holographic-headset;holographic-management;crossdevice;pen;clipboard;network-wificalling;network-airplanemode;network-cellular;workplace;personalization-start;otherusers;sync;lockscreen;maps;appsforwebsites;quiethours"
 
-; remove print from context menu
+; remove print from the context menu
 
-[-HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
-[-HKEY_CLASSES_ROOT\batfile\shell\print]
-[-HKEY_CLASSES_ROOT\cmdfile\shell\print]
-[-HKEY_CLASSES_ROOT\docxfile\shell\print]
-[-HKEY_CLASSES_ROOT\fonfile\shell\print]
-[-HKEY_CLASSES_ROOT\htmlfile\shell\print]
-[-HKEY_CLASSES_ROOT\inffile\shell\print]
-[-HKEY_CLASSES_ROOT\inifile\shell\print]
-[-HKEY_CLASSES_ROOT\JSEFile\Shell\Print]
-[-HKEY_CLASSES_ROOT\otffile\shell\print]
-[-HKEY_CLASSES_ROOT\pfmfile\shell\print]
-[-HKEY_CLASSES_ROOT\regfile\shell\print]
-[-HKEY_CLASSES_ROOT\rtffile\shell\print]
-[-HKEY_CLASSES_ROOT\ttcfile\shell\print]
-[-HKEY_CLASSES_ROOT\ttffile\shell\print]
-[-HKEY_CLASSES_ROOT\txtfile\shell\print]
-[-HKEY_CLASSES_ROOT\VBEFile\Shell\Print]
-[-HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
-[-HKEY_CLASSES_ROOT\WSFFile\Shell\Print]
+[HKEY_CLASSES_ROOT\SYSTEMFileAssociations\image\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\batfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\cmdfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\docxfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\fonfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\htmlfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inifile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\JSEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\otffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\pfmfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\regfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\rtffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttcfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\txtfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\WSFFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
 
 ; remove pin to start from context menu
 
