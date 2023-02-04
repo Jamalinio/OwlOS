@@ -1,2 +1,2 @@
 # OwlOS
-🦉These are custom windows made for gamers to improve performance and decrease latency🦉
+🦉These are custom windows made for gamers to improve gaming performance🦉
