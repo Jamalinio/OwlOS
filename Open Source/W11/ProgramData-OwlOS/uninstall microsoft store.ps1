@@ -1,1 +1,0 @@
-Get-AppxPackage *windowsstore* | Remove-AppxPackage
