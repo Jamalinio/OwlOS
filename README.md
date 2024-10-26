@@ -14,4 +14,4 @@ Download: https://dsc.gg/owlos
 
 
 
-Credits: AMIT, Imribiy, Calypto, Matishzz, NTLite Forum
+Credits: AMIT, Imribiy, Calypto, Matishzz, NTLite support
