@@ -10,4 +10,4 @@ OwlOS 11 (24H2) v0.1
  - SHA-256: 920a87cc9dbf70621a00a0008d1168aa64acc3cf5ec0659b45611280ab26a9e7
 
 
-https://dsc.gg/owlos
+Download: https://dsc.gg/owlos
