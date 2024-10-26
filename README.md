@@ -11,3 +11,7 @@ OwlOS 11 (24H2) v0.1
 
 
 Download: https://dsc.gg/owlos
+
+
+
+Credits: AMIT, Imribiy, Calypto, Matishzz, NTLite Forum
