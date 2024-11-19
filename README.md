@@ -1,13 +1,21 @@
 # OwlOS
 A custom Windows ISO optimized for performance enhances system speed and responsiveness by removing unnecessary bloatware, disabling unused services, and fine-tuning system settings. This streamlined version allows for faster boot times, lower resource usage, and an overall smoother experience.
 
-OwlOS 10 (22H2) v0.6
- - SHA-1: e378d7b966776b733ee18db144ecabe0b58d5a35
- - SHA-256: 411b0b1358af7b79206f68dddd945df094375ef91a25cef90ee9cc1a9c2ffcec
 
-OwlOS 11 (24H2) v0.1
- - SHA-1: 3462ad59b037ae6f279a68390277ae00e4c3ccc1
- - SHA-256: 920a87cc9dbf70621a00a0008d1168aa64acc3cf5ec0659b45611280ab26a9e7
+Unsupported Features on OwlOS:
+ - Windows Update
+ - Windows Recovery (WinRE)
+ - Troubleshooting Service
+ - BitLocker Drive Encryption
+ - Installation from setup.exe - "OwlOS 10 (22H2)"
+
+OwlOS 10 (22H2) v0.7:
+ - SHA-1: 3fb2876fd91ca9d0fe93779e95f47ea070c683b5
+ - SHA-256: 4d95a304eb60872efe5f09cb5f317d4e568c2bab68c54d563c44128041677472
+
+OwlOS 11 (24H2) v0.2:
+ - SHA-1: 605c6e90222ea4b9d027168bea0ecac416b937ad
+ - SHA-256: f035742d10e0a5eb4a378823220d1fb697a0d491e2cd7803b9019ca8b857a4e0
 
 
 Download: https://dsc.gg/owlos
