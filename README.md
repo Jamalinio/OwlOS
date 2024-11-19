@@ -1,7 +1,7 @@
 # OwlOS
 A custom Windows ISO optimized for performance enhances system speed and responsiveness by removing unnecessary bloatware, disabling unused services, and fine-tuning system settings. This streamlined version allows for faster boot times, lower resource usage, and an overall smoother experience.
-
-
+ 
+ 
 Unsupported Features on OwlOS:
  - Windows Update
  - Windows Recovery (WinRE)
@@ -16,8 +16,8 @@ OwlOS 10 (22H2) v0.7:
 OwlOS 11 (24H2) v0.2:
  - SHA-1: 605c6e90222ea4b9d027168bea0ecac416b937ad
  - SHA-256: f035742d10e0a5eb4a378823220d1fb697a0d491e2cd7803b9019ca8b857a4e0
-
-
+ 
+ 
 Download: https://dsc.gg/owlos
 
 Credits: AMIT, Imribiy, Calypto, Matishzz, NTLite support
