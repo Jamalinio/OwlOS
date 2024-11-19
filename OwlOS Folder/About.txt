@@ -1,0 +1,6 @@
+OwlOS is already optimized after installation, so you don't have to do practically anything.
+All you need to do is install the browser from "Browser" folder and graphics driver from "GPU Drivers". 
+Alternatively, you can enable or disable features you need, using the scripts located in the "Services and Features" folder. 
+If you have a little more knowledge, you can also use the programs located in the "Tools" folder.
+
+dsc.gg/owlos
