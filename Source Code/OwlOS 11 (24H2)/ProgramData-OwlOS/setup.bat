@@ -1,5 +1,5 @@
 @echo off
-@title "OwlOS 11 (24H2) v0.1"
+@title "OwlOS 11 (24H2) v0.2"
 SETLOCAL EnableDelayedExpansion
 taskkill /f /im explorer.exe >nul 2>&1
 ::Setting fullscreen mode for post-installation script
@@ -48,6 +48,7 @@ bcdedit /set {globalsettings} custom:16000069 true >nul 2>&1
 bcdedit /set bootmenupolicy legacy >nul 2>&1
 bcdedit /timeout 10 >nul 2>&1
 bcdedit /set {current} description "OwlOS 11 (24H2)" >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo CONFIGURING FSUTIL BEHAVIORS
@@ -59,6 +60,7 @@ fsutil behavior set disablelastaccess 1 >nul 2>&1
 
 ::Enabling TRIM. Improves write and read performance and overall drive speed on SSD.
 fsutil behavior set disabledeletenotify 0 >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo CONFIGURING SVCHOST BEHAVIORS
@@ -76,6 +78,7 @@ Reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Paramete
 Reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%i" /v "TcpDelAckTicks" /d "0" /t REG_DWORD /f
 Reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%i" /v "TCPNoDelay" /d "1" /t REG_DWORD /f
 ) >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo OPTIMIZING NETWORK SETTINGS
@@ -97,6 +100,7 @@ cls
 
 echo DISABLING SCHEDULED TASKS
 schtasks /Change /Disable /TN "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser Exp" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Application Experience\StartupAppTask" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\ApplicationData\CleanupTemporaryState" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\ApplicationData\DsSvcCleanup" >nul 2>&1
@@ -110,28 +114,43 @@ schtasks /Change /Disable /TN "\Microsoft\Windows\Customer Experience Improvemen
 schtasks /Change /Disable /TN "\Microsoft\Windows\Data Integrity Scan\Data Integrity Check And Scan" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Data Integrity Scan\Data Integrity Scan" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Data Integrity Scan\Data Integrity Scan for Crash Recovery" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanner" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Diagnosis\Scheduled" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\DiskCleanup\SilentCleanup" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\DiskFootprint\StorageSense" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\DiskFootprint\Diagnostics" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Feedback\Siuf\DmClient" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\FileHistory\File History (maintenance mode)" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\InstallService\ScanForUpdates" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\InstallService\ScanForUpdatesAsUser" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\InstallService\WakeUpAndContinueUpdates" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\InstallService\WakeUpAndScanForUpdates" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Maintenance\WinSAT" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\MemoryDiagnostic\ProcessMemoryDiagnosticEvents" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\MemoryDiagnostic\RunFullMemoryDiagnostic" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\NlaSvc\WiFiTask" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\PerformanceTrace\RequestTrace" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\RemoteAssistance\RemoteAssistanceTask" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Servicing\StartComponentCleanup" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Speech\SpeechModelDownloadTask" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\StateRepository\MaintenanceTasks" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Time Synchronization\SynchronizeTime" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Time Zone\SynchronizeTimeZone" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\USB\Usb-Notifications" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\WDI\ResolutionHost" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Windows Defender\Windows Defender Cache Maintenance" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Windows Defender\Windows Defender Cleanup" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Windows Defender\Windows Defender Scheduled Scan" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Windows Defender\Windows Defender Verification" >nul 2>&1
+schtasks /Change /Disable /TN "\Microsoft\Windows\Windows Error Reporting\QueueReporting" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\WindowsUpdate\Scheduled Start" >nul 2>&1
 schtasks /Change /Disable /TN "\Microsoft\Windows\Wininet\CacheTask" >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo DISABLING POWER-SAVING FEATURES
@@ -154,6 +173,7 @@ for /f "tokens=*" %%i in ('reg query "HKLM\SYSTEM\CurrentControlSet\Enum\PCI"^| 
 			for /f "tokens=*" %%a in ('reg query "%%i"^| findstr "HKEY"') do Reg.exe delete "%%a\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /f >nul 2>&1
 		) >nul 2>&1
 ) >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo DISABLING USB CONTROLLER's AND HUB's POWER-SAVING
@@ -168,21 +188,41 @@ powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()" >n
 powershell -ExecutionPolicy Bypass -File C:\ProgramData\OwlOS\PowerShell_Scripts\dma.ps1 >nul 2>&1
 cls
 
+echo BLOCKING TELEMETRY
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\ClientTelemetry" /v "IsCensusDisabled" /t REG_DWORD /d "1" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\ClientTelemetry" /v "DontRetryOnError" /t REG_DWORD /d "1" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\ClientTelemetry" /v "TaskEnableRun" /t REG_DWORD /d "1" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f >nul 2>&1
+Reg.exe add "HKCU\Software\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d "1" /f >nul 2>&1
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /v "Start" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKCU\SOFTWARE\Policies\Microsoft\Assistance\Client\1.0" /v "NoExplicitFeedback" /t REG_DWORD /d "1" /f >nul 2>&1
+::Disable windows media player tracking
+Reg.exe add "HKCU\SOFTWARE\Microsoft\MediaPlayer\Preferences" /v "UsageTracking" /t REG_DWORD /d "0" /f >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
+cls
+
 echo REMOVING FIREWALL RULES
 ::These commands remove all firewall rules from the registry and then add a new, default rule.
 ::Benefits include resolving network connection issues and restoring the correct firewall configuration.
 Reg.exe delete "HKLM\System\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules" /f >nul 2>&1
 Reg.exe add "HKLM\System\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules" /f >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
-echo SETTING SOUND SCHEME TO NO SOUNDS AND DISBALING WINDOWS STARTUP SONG
+echo CONFIGURING SOUND SETTINGS
+::Setting sound scheme to "No Sounds"
+::Disabling windows startup song
 powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()" >nul 2>&1
 powershell -ExecutionPolicy Bypass -File C:\ProgramData\OwlOS\PowerShell_Scripts\sounds.ps1 >nul 2>&1
 cls
 
-echo IMPORTING AND SETTING CUSTOM "OwlOS" POWER PLAN
+echo IMPORTING AND SETTING AS ACTIVE CUSTOM "OwlOS" POWER PLAN
 powercfg -import "C:\ProgramData\OwlOS\owlos.pow" 99999999-9999-9999-9999-999999999999 >nul 2>&1
 powercfg -setactive 99999999-9999-9999-9999-999999999999 >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo CONFIGURING SYSTEM VISUAL SETTINGS
@@ -192,11 +232,16 @@ Reg.exe add "HKCU\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" /t REG_SZ
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewShadow" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewAlphaSelect" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarAnimations" /t REG_DWORD /d "0" /f >nul 2>&1
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconsOnly" /t REG_DWORD /d "1" /f >nul 2>&1
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconsOnly" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v "EnableAeroPeek" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d  "9b9a9900848381006d6b6a004c4a4800363533002625240019191900107c1000" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "4282927692" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableTransparency" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d "1" /f >nul 2>&1
 Reg.exe add "HKCU\Control Panel\Desktop" /v "JPEGImportQuality" /t "REG_DWORD" /d "100" /f >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 echo ENABLING LEGACY PHOTO VIEWER
@@ -213,13 +258,13 @@ Reg.exe add "HKCU\SOFTWARE\Classes\.jfif" /ve /t REG_SZ /d "PhotoViewer.FileAsso
 Reg.exe add "HKCU\SOFTWARE\Classes\.dib" /ve /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Classes\.jpe" /ve /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f >nul 2>&1
 Reg.exe add "HKCU\SOFTWARE\Classes\.jxr" /ve /t REG_SZ /d "PhotoViewer.FileAssoc.Tiff" /f >nul 2>&1
+timeout /t 2 /nobreak >nul 2>&1
 cls
 
 ::other
 echo FINISHING...
 powershell "Get-AppxPackage *windowsstore* | Remove-AppxPackage" >nul 2>&1
 powershell "Get-AppxPackage | Where-Object {$_.Name -Like '*Microsoft.Copilot*'} | Remove-AppxPackage -ErrorAction Continue" >nul 2>&1
-powershell "Get-AppxPackage | Where-Object {$_.Name -Like '*OutlookForWindows*'} | Remove-AppxPackage -ErrorAction Continue" >nul 2>&1
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\edgeupdate" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\edgeupdatem" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\wuauserv" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
@@ -235,6 +280,7 @@ Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "PauseQuality
 Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "PauseUpdatesExpiryTime" /t REG_SZ /d "2028-08-03T20:00:00Z" /f >nul 2>&1
 Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "PauseUpdatesStartTime" /t REG_SZ /d "2024-10-01T20:00:00Z" /f >nul 2>&1
 Reg.exe add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "AllowMUUpdateService" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate" /v "AutoDownload" /t REG_DWORD /d "2" /f >nul 2>&1
 Reg.exe add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoPinningStoreToTaskbar" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband" /f >nul 2>&1
 Reg.exe delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /f >nul 2>&1
@@ -242,6 +288,12 @@ Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /f >nul 2>&1
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "FeatureSettingsOverride" /t REG_DWORD /d "3" /f >nul 2>&1
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "FeatureSettingsOverrideMask" /t REG_DWORD /d "3" /f >nul 2>&1
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNotifications" /v "EnableAccountNotifications" /t REG_DWORD /d "0" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /ve /t REG_SZ /d "" /f >nul 2>&1
+Reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /ve /t REG_SZ /d "" /f >nul 2>&1
+Reg.exe add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Program Files\OwlOS\wallpaper.jpg" /f >nul 2>&1
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters >nul 2>&1
+rmdir /S /Q C:\ProgramData\OwlOS >nul 2>&1
+rmdir /S /Q C:\Windows.old >nul 2>&1
 del /q/f/s %TEMP%\* >nul 2>&1
 cls
 
