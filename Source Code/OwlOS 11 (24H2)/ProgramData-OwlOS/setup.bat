@@ -1,16 +1,7 @@
 @echo off
-@title "OwlOS 11 (24H2) v0.2"
+@title "OwlOS 11 (24H2) v0.3"
 SETLOCAL EnableDelayedExpansion
 taskkill /f /im explorer.exe >nul 2>&1
-::Setting fullscreen mode for post-installation script
-SET TempVBSFile=%temp%\~tmpSendKeysTemp.vbs
-IF EXIST "%TempVBSFile%" DEL /F /Q "%TempVBSFile%"
-ECHO Set WshShell = WScript.CreateObject("WScript.Shell") >>"%TempVBSFile%"
-ECHO Wscript.Sleep 900                                    >>"%TempVBSFile%"
-ECHO WshShell.SendKeys "{F11}"                            >>"%TempVBSFile%
-ECHO Wscript.Sleep 900                                    >>"%TempVBSFile%"
-CSCRIPT //nologo "%TempVBSFile%"
-
 ::Running script as administrator
 >nul 2>&1 reg.exe query "HKU\S-1-5-19" || (
     echo set UAC = CreateObject^("Shell.Application"^) > "%temp%\Getadmin.vbs"
@@ -20,7 +11,7 @@ CSCRIPT //nologo "%TempVBSFile%"
     exit /b
 )
 
-echo INSTALLING VCRedist
+echo INSTALLING VCRedist x64, x86 (It can take a while)
 start /b /wait C:\ProgramData\OwlOS\VCRedist\VC_redist.x64.exe /q /norestart >nul 2>&1
 start /b /wait C:\ProgramData\OwlOS\VCRedist\VC_redist.x86.exe /q /norestart >nul 2>&1
 cls
@@ -290,8 +281,8 @@ Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "FeatureS
 Reg.exe add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNotifications" /v "EnableAccountNotifications" /t REG_DWORD /d "0" /f >nul 2>&1
 Reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /ve /t REG_SZ /d "" /f >nul 2>&1
 Reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /ve /t REG_SZ /d "" /f >nul 2>&1
-Reg.exe add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Program Files\OwlOS\wallpaper.jpg" /f >nul 2>&1
-RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters >nul 2>&1
+powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()" >nul 2>&1
+powershell -ExecutionPolicy Bypass -File C:\ProgramData\OwlOS\PowerShell_Scripts\wallpaper.ps1 >nul 2>&1
 rmdir /S /Q C:\ProgramData\OwlOS >nul 2>&1
 rmdir /S /Q C:\Windows.old >nul 2>&1
 del /q/f/s %TEMP%\* >nul 2>&1
