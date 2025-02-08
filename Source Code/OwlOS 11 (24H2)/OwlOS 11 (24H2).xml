@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
-	<Date>11/16/2024 16:38:59</Date>
+	<Date>02/02/2025 21:52:04</Date>
 	<AppInfo>
-		<Version>2024.11.10166</Version>
+		<Version>2025.1.10275</Version>
 		<Licensed>No</Licensed>
 		<Protections>Yes</Protections>
-		<Host>Windows 11 Professional 24H2 x64 - 10.0.26100.2033 (en-US)</Host>
+		<Host>Windows 10 Professional 22H2 x64 - 10.0.19045.5194 (en-US)</Host>
 	</AppInfo>
 	<ImageInfo>
-		<Version mode="offline">Windows 11 Professional 24H2 x64 - 10.0.26100.2448 (en-US)</Version>
-		<GUID>{B0726590-445F-1928-844B-176ABCC4CA54}</GUID>
+		<Version mode="offline">Windows 11 Professional 24H2 x64 - 10.0.26100.3037 (en-US)</Version>
+		<GUID>{21853A68-7849-7FB0-5F5A-BA8D88E15FB8}</GUID>
 	</ImageInfo>
 	<RemoveComponents AppRemovalMode="Custom">
-		<c>assembly.net '.NET assembly cache'</c>
+		<c>assembly.net '.NET assembly - pamięć podręczna'</c>
+		<c>branchcacheclient 'Klient BranchCache'</c>
 		<c>clipchamp.clipchamp</c>
+		<c>kerneldebug 'Debugowanie jądra'</c>
 		<c>microsoft.applicationcompatibilityenhancements 'Windows Application Compatibility Enhancements'</c>
 		<c>microsoft.bingnews 'Microsoft News'</c>
 		<c>microsoft.bingsearch 'Microsoft Bing Search'</c>
@@ -33,7 +35,7 @@
 		<c>microsoft.vp9videoextensions 'VP9 Video Extensions'</c>
 		<c>microsoft.webmediaextensions 'Web Media Extensions'</c>
 		<c>microsoft.webpimageextension 'Webp Image Extensions'</c>
-		<c>microsoft.windows.contentdeliverymanager 'Content Delivery Manager'</c>
+		<c>microsoft.windows.contentdeliverymanager 'Menedżer dostarczania treści'</c>
 		<c>microsoft.windows.devhome 'Dev Home'</c>
 		<c>microsoft.windows.parentalcontrols 'Microsoft Family Safety'</c>
 		<c>microsoft.windows.photos 'Microsoft Photos'</c>
@@ -48,71 +50,76 @@
 		<c>microsoft.zunemusic 'Windows Media Player'</c>
 		<c>microsoftcorporationii.microsoftfamily 'Microsoft Family'</c>
 		<c>microsoftcorporationii.quickassist 'Quick Assist'</c>
-		<c>microsoftwindows.client.webexperience 'Windows Web Experience Pack'</c>
+		<c>microsoftwindows.client.webexperience 'Pakiet Windows Web Experience'</c>
 		<c>microsoftwindows.crossdevice 'Cross Device Experience Host'</c>
 		<c>msteams 'Microsoft Teams'</c>
-		<c>sourcessxsdir 'Manual feature repository'</c>
-		<c>supportdir 'Support directory'</c>
-		<c>wallpapers 'Wallpapers (Themes)'</c>
+		<c>sourcessxsdir 'Manualna obsługa repozytorium'</c>
+		<c>supportdir 'Katalog "Support"'</c>
+		<c>wallpapers 'Tapety (motywy)'</c>
 	</RemoveComponents>
 	<Compatibility protectHidden="false">
 		<ComponentFeatures>
-			<Feature enabled="no">AppGuard</Feature>
+			<Feature enabled="no">HostRefresh</Feature>
+			<Feature enabled="no">ActivationKMS</Feature>
+			<Feature enabled="no">Activation</Feature>
 			<Feature enabled="no">Battle.net</Feature>
 			<Feature enabled="no">YubiKey</Feature>
 			<Feature enabled="no">Bluetooth</Feature>
-			<Feature enabled="no">USBCamera</Feature>
 			<Feature enabled="no">CapFrameX</Feature>
+			<Feature enabled="no">DefaultFonts</Feature>
 			<Feature enabled="no">Discord</Feature>
-			<Feature enabled="no">FileSharing</Feature>
+			<Feature enabled="no">Docker</Feature>
+			<Feature enabled="no">Printing</Feature>
+			<Feature enabled="no">EA Anti-Cheat</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
 			<Feature enabled="no">Hyper-V</Feature>
 			<Feature enabled="no">iCloud</Feature>
+			<Feature enabled="no">WinSetup</Feature>
+			<Feature enabled="no">USBCamera</Feature>
 			<Feature enabled="no">Kaspersky</Feature>
-			<Feature enabled="no">ManualSetup</Feature>
+			<Feature enabled="no">VSS</Feature>
 			<Feature enabled="no">OfficeSupport</Feature>
-			<Feature enabled="no">AppxSupport</Feature>
 			<Feature enabled="no">Netflix</Feature>
-			<Feature enabled="no">NetworkDiscovery</Feature>
 			<Feature enabled="no">NightLight</Feature>
 			<Feature enabled="no">NvidiaSetup</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">AppGuard</Feature>
+			<Feature enabled="no">VideoPlayback</Feature>
 			<Feature enabled="no">OOBE</Feature>
-			<Feature enabled="no">Printing</Feature>
-			<Feature enabled="no">Recommended-All</Feature>
+			<Feature enabled="no">ServicingStack</Feature>
+			<Feature enabled="no">SafeMode</Feature>
 			<Feature enabled="no">SamsungSwitch</Feature>
 			<Feature enabled="no">Scanning</Feature>
-			<Feature enabled="no">ServicingStack</Feature>
-			<Feature enabled="no">ShellSearchSupport</Feature>
 			<Feature enabled="no">Spotify</Feature>
 			<Feature enabled="no">SFC</Feature>
-			<Feature enabled="no">DefaultFonts</Feature>
-			<Feature enabled="no">SafeMode</Feature>
 			<Feature enabled="no">TeamViewer</Feature>
-			<Feature enabled="no">Recommended-Tablet</Feature>
 			<Feature enabled="no">USBModem</Feature>
 			<Feature enabled="no">USB</Feature>
-			<Feature enabled="no">VideoPlayback</Feature>
-			<Feature enabled="no">VPN</Feature>
 			<Feature enabled="no">VisualStudio</Feature>
-			<Feature enabled="no">VSS</Feature>
-			<Feature enabled="no">ActivationKMS</Feature>
-			<Feature enabled="no">Activation</Feature>
-			<Feature enabled="yes">WinSetup</Feature>
 			<Feature enabled="no">WindowsStore</Feature>
 			<Feature enabled="no">WindowsUpdate</Feature>
 			<Feature enabled="no">WLAN</Feature>
+			<Feature enabled="no">AppxSupport</Feature>
+			<Feature enabled="no">FileSharing</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="no">ShellSearchSupport</Feature>
+			<Feature enabled="no">Recommended-All</Feature>
+			<Feature enabled="no">RDPServer</Feature>
 		</ComponentFeatures>
 		<MachineDrivers>
-			<Machine enabled="no">HostMachine</Machine>
 			<Machine enabled="no">Hyper-V VM</Machine>
 			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">HostMachine</Machine>
 			<Machine enabled="no">Virtual Box VM</Machine>
 			<Machine enabled="no">VMware VM</Machine>
 		</MachineDrivers>
 	</Compatibility>
 	<Features>
 		<Feature name="DirectPlay">true</Feature>
+		<Feature name="OneCoreUAP.OneSync~~~~0.0.1.0">false</Feature>
 		<Feature name="Printing-Foundation-InternetPrinting-Client">false</Feature>
 		<Feature name="LegacyComponents">true</Feature>
+		<Feature name="MathRecognizer~~~~0.0.1.0">false</Feature>
 		<Feature name="Printing-PrintToPDFServices-Features">false</Feature>
 		<Feature name="Printing-Foundation-Features">false</Feature>
 		<Feature name="MSRDC-Infrastructure">false</Feature>
@@ -131,6 +138,8 @@
 			<OptimizeAppX>true</OptimizeAppX>
 			<UpdateBootManager>false</UpdateBootManager>
 		</Options>
+		<File>C:\Program Files\NTLite\Cache\Updates\11.24H2.x64\windows11.0-kb5047134-x64_6273c3ce9dedf2c11b3dabfd5367e4f4f2021ea3.cab</File>
+		<File>C:\Program Files\NTLite\Cache\Updates\11.24H2.x64\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle</File>
 	</Packages>
 	<Commands>
 		<PostUpdates>
@@ -143,56 +152,68 @@
 			<ReuseDriverCache>false</ReuseDriverCache>
 			<ShowHidden>false</ShowHidden>
 		</Options>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS65\e1c65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS68\e1d.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\W11\e1d.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS65\e1d65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\W11\e1dn.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\W11\e1r.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\WS2022\e1r.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS65\e1r65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS68\e1r68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO2500\Winx64\NDIS68\e2f.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO2500\Winx64\W11\e2fn.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\W11\i40ea.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\WS2022\i40ea.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\NDIS65\i40ea65.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\NDIS68\i40ea68.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\WS2022\i40eb.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\W11\i40eb.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\NDIS65\i40eb65.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO40GB\Winx64\NDIS68\i40eb68.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROAVF\Winx64\WS2022\iavf.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROAVF\Winx64\NDIS65\iavf65.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROAVF\Winx64\NDIS68\iavf68.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\WS2022\icea.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\W11\icea.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\NDIS65\icea65.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\NDIS68\icea68.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\ixn65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\ixn68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\WS2022\ixs.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\W11\ixs.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\ixs65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\ixs68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\ixt65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\ixt68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\WS2022\scea.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROCGB\Winx64\NDIS68\scea68.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\WS2022\sxa.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\sxa65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\sxa68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\WS2022\sxb.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\sxb65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\sxb68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS65\v1q65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PRO1000\Winx64\NDIS68\v1q68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\vxn65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\vxn68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\WS2022\vxs.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS65\vxs65x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Intel\PROXGB\Winx64\NDIS68\vxs68x64.inf</File>
-		<File>C:\OwlOS 11\Drivers\Realtek\rt640x64sta.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS65\e1c65x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS68\e1d.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\W11\e1d.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS65\e1d65x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\W11\e1dn.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\WS2025\e1r.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\WS2022\e1r.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\W11\e1r.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS65\e1r65x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS68\e1r68x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO2500\Winx64\NDIS68\e2f.inf</File>
+		<File>C:\OwlOS\Intel\PRO2500\Winx64\W11\e2fn.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\W11\i40ea.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\WS2025\i40ea.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\WS2022\i40ea.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\NDIS65\i40ea65.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\NDIS68\i40ea68.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\WS2022\i40eb.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\WS2025\i40eb.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\W11\i40eb.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\NDIS65\i40eb65.inf</File>
+		<File>C:\OwlOS\Intel\PRO40GB\Winx64\NDIS68\i40eb68.inf</File>
+		<File>C:\OwlOS\Intel\PROAVF\Winx64\WS2022\iavf.inf</File>
+		<File>C:\OwlOS\Intel\PROAVF\Winx64\WS2025\iavf.inf</File>
+		<File>C:\OwlOS\Intel\PROAVF\Winx64\NDIS65\iavf65.inf</File>
+		<File>C:\OwlOS\Intel\PROAVF\Winx64\NDIS68\iavf68.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\WS2025\icea.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\WS2022\icea.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\W11\icea.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\NDIS65\icea65.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\NDIS68\icea68.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\ixn65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\ixn68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2025\ixs.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2022\ixs.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\W11\ixs.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\ixs65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\ixs68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\ixt65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\ixt68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2025\ixw.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2022\ixw.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\W11\ixw.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\WS2025\scea.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\WS2022\scea.inf</File>
+		<File>C:\OwlOS\Intel\PROCGB\Winx64\NDIS68\scea68.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2025\sxa.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2022\sxa.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\sxa65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\sxa68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2022\sxb.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\sxb65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\sxb68x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS65\v1q65x64.inf</File>
+		<File>C:\OwlOS\Intel\PRO1000\Winx64\NDIS68\v1q68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\vxn65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\vxn68x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2022\vxs.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\WS2025\vxs.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS65\vxs65x64.inf</File>
+		<File>C:\OwlOS\Intel\PROXGB\Winx64\NDIS68\vxs68x64.inf</File>
+		<File>C:\OwlOS\Realtek\rt640x64sta.inf</File>
 	</Drivers>
 	<Unattended mode="1">
 		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
@@ -262,6 +283,160 @@
 	</Unattended>
 	<Tweaks>
 		<Settings>
+			<TweakGroup name="Explorer">
+				<Tweak name="AutoplayHandlers\DisableAutoplay">1</Tweak>
+				<Tweak name="Explorer\EnableLegacyBalloonNotifications">0</Tweak>
+				<Tweak name="{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}\HiddenByDefault">1</Tweak>
+				<Tweak name="Advanced\ShowSyncProviderNotifications">0</Tweak>
+				<Tweak name="Explorer\NoReadingPane">1</Tweak>
+				<Tweak name="Advanced\ShowTaskViewButton">0</Tweak>
+				<Tweak name=".jpg\PhotoViewer.FileAssoc.Tiff">PhotoViewer.FileAssoc.Tiff</Tweak>
+				<Tweak name="Advanced\FolderContentsInfoTip">0</Tweak>
+				<Tweak name="Explorer\NoRecentDocsHistory">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="EventLogs">
+				<Tweak name="Microsoft-Windows-Application-Experience\Program-Telemetry\Enabled">0</Tweak>
+				<Tweak name="Microsoft-Windows-UniversalTelemetryClient\Operational\Enabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="CrashControl">
+				<Tweak name="CrashControl\AutoReboot">0</Tweak>
+				<Tweak name="CrashControl\EnableLogFile">0</Tweak>
+				<Tweak name="CrashControl\CrashDumpEnabled">0</Tweak>
+				<Tweak name="CrashControl\LogEvent">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="UAC">
+				<Tweak name="System\PromptOnSecureDesktop">0</Tweak>
+				<Tweak name="System\FilterAdministratorToken">0</Tweak>
+				<Tweak name="PointAndPrint\RestrictDriverInstallationToAdministrators">0</Tweak>
+				<Tweak name="System\ConsentPromptBehaviorAdmin">0</Tweak>
+				<Tweak name="System\ConsentPromptBehaviorUser">0</Tweak>
+				<Tweak name="System\EnableVirtualization">0</Tweak>
+				<Tweak name="System\EnableInstallerDetection">0</Tweak>
+				<Tweak name="System\EnableSecureUIAPaths">0</Tweak>
+				<Tweak name="System\EnableLUA">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="PowerAndShutdown">
+				<Tweak name="FlyoutMenuSettings\ShowHibernateOption">0</Tweak>
+				<Tweak name="FlyoutMenuSettings\ShowSleepOption">0</Tweak>
+				<Tweak name="FlyoutMenuSettings\ShowLockOption">0</Tweak>
+				<Tweak name="Power\HiberbootEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Privacy">
+				<Tweak name="AppCompat\DisablePCA">1</Tweak>
+				<Tweak name="1.7\EnableAutocorrection">0</Tweak>
+				<Tweak name="CloudContent\DisableWindowsConsumerFeatures">1</Tweak>
+				<Tweak name="ContentDeliveryManager\SilentInstalledAppsEnabled">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SystemPaneSuggestionsEnabled">0</Tweak>
+				<Tweak name="Rules\NumberOfSIUFInPeriod">0</Tweak>
+				<Tweak name="ContentDeliveryManager\PreInstalledAppsEnabled">0</Tweak>
+				<Tweak name="ContentDeliveryManager\OemPreInstalledAppsEnabled">0</Tweak>
+				<Tweak name="1.7\EnableSpellchecking">0</Tweak>
+				<Tweak name="System\AllowClipboardHistory">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SubscribedContent-338393Enabled">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SubscribedContent-310093Enabled">0</Tweak>
+				<Tweak name="SmartGlass\BluetoothPolicy">0</Tweak>
+				<Tweak name="SmartGlass\UserAuthPolicy">0</Tweak>
+				<Tweak name="AdvertisingInfo\Enabled">0</Tweak>
+				<Tweak name="Privacy\TailoredExperiencesWithDiagnosticDataEnabled">0</Tweak>
+				<Tweak name="User Profile\HttpAcceptLanguageOptOut">1</Tweak>
+				<Tweak name="System\EnableActivityFeed">0</Tweak>
+				<Tweak name="Advanced\Start_TrackDocs">0</Tweak>
+				<Tweak name="Advanced\Start_TrackProgs">0</Tweak>
+				<Tweak name="SearchSettings\IsDeviceSearchHistoryEnabled">0</Tweak>
+				<Tweak name="System\EnableCdp">0</Tweak>
+				<Tweak name="AccountNotifications\EnableAccountNotifications">0</Tweak>
+				<Tweak name="Settings\AcceptedPrivacyPolicy">0</Tweak>
+				<Tweak name="Search\BingSearchEnabled">0</Tweak>
+				<Tweak name="InputPersonalization\AllowInputPersonalization">0</Tweak>
+				<Tweak name="FlipAhead\FPEnabled">0</Tweak>
+				<Tweak name="WindowsCopilot\TurnOffWindowsCopilot">1</Tweak>
+				<Tweak name="WindowsAI\DisableAIDataAnalysis">1</Tweak>
+				<Tweak name="CloudContent\DisableWindowsSpotlightFeatures">1</Tweak>
+				<Tweak name="Settings\InsightsEnabled">0</Tweak>
+				<Tweak name="TIPC\Enabled">0</Tweak>
+				<Tweak name="UserProfileEngagement\ScoobeSystemSettingEnabled">0</Tweak>
+				<Tweak name="TrainedDataStore\HarvestContacts">0</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitInkCollection">1</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitTextCollection">1</Tweak>
+				<Tweak name="DataCollection\AllowTelemetry">0</Tweak>
+				<Tweak name="System\AllowLocation">0</Tweak>
+				<Tweak name="documentsLibrary\Value">Deny</Tweak>
+				<Tweak name="videosLibrary\Value">Deny</Tweak>
+				<Tweak name="picturesLibrary\Value">Deny</Tweak>
+				<Tweak name="email\Value">Deny</Tweak>
+				<Tweak name="phoneCallHistory\Value">Deny</Tweak>
+				<Tweak name="appDiagnostics\Value">Deny</Tweak>
+				<Tweak name="userAccountInformation\Value">Deny</Tweak>
+				<Tweak name="contacts\Value">Deny</Tweak>
+				<Tweak name="radios\Value">Deny</Tweak>
+				<Tweak name="userNotificationListener\Value">Deny</Tweak>
+				<Tweak name="phoneCall\Value">Deny</Tweak>
+				<Tweak name="appointments\Value">Deny</Tweak>
+				<Tweak name="broadFileSystemAccess\Value">Deny</Tweak>
+				<Tweak name="LooselyCoupled\Value">Deny</Tweak>
+				<Tweak name="chat\Value">Deny</Tweak>
+				<Tweak name="userDataTasks\Value">Deny</Tweak>
+				<Tweak name="System\AllowExperimentation">0</Tweak>
+				<Tweak name="Client\OptInOrOutPreference">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="DesktopTweaks">
+				<Tweak name="PushNotifications\ToastEnabled">0</Tweak>
+				<Tweak name="QuietHours\Enable">0</Tweak>
+				<Tweak name="Personalize\AppsUseLightTheme">0</Tweak>
+				<Tweak name="Winlogon\EnableGoodbye">0</Tweak>
+				<Tweak name="InprocServer32\"></Tweak>
+				<Tweak name="Mouse\MouseSpeed">0</Tweak>
+				<Tweak name="Advanced\TaskbarMn">0</Tweak>
+				<Tweak name="Dsh\AllowNewsAndInterests">0</Tweak>
+				<Tweak name="PushNotifications\NoCloudApplicationNotification">1</Tweak>
+				<Tweak name="Communications\ConfigureChatAutoInstall">0</Tweak>
+				<Tweak name="Personalize\SystemUsesLightTheme">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="StartTweaks">
+				<Tweak name="Start\AllowPinnedFolderSettings">1</Tweak>
+				<Tweak name="Start\HideFrequentlyUsedApps">1</Tweak>
+				<Tweak name="Explorer\ShowOrHideMostUsedApps">0</Tweak>
+				<Tweak name="Start\HideHibernate">1</Tweak>
+				<Tweak name="Start\HideSleep">1</Tweak>
+				<Tweak name="Advanced\Start_IrisRecommendations">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="System">
+				<Tweak name="System\EnableFirstLogonAnimation">0</Tweak>
+				<Tweak name="BitLocker\PreventDeviceEncryption">1</Tweak>
+				<Tweak name="Appx\AllowAutomaticAppArchiving">0</Tweak>
+				<Tweak name="DeviceGuard\EnableVirtualizationBasedSecurity">0</Tweak>
+				<Tweak name="DiskQuota\Enable">0</Tweak>
+				<Tweak name="WinRE\UninstallWindowsRE">1</Tweak>
+				<Tweak name="OneDrive\DisableFileSyncNGSC">1</Tweak>
+				<Tweak name="EMDMgmt\GroupPolicyDisallowCaches">1</Tweak>
+				<Tweak name="System\VerboseStatus">0</Tweak>
+				<Tweak name="LabConfig\BypassTPMCheck">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="WindowsUpdate">
+				<Tweak name="Preferences\ModelDownloadAllowed">0</Tweak>
+				<Tweak name="Device Metadata\PreventDeviceMetadataFromNetwork">1</Tweak>
+				<Tweak name="Settings\AllowAutoWindowsUpdateDownloadOverMeteredNetwork">0</Tweak>
+				<Tweak name="MRT\DontOfferThroughWUAU">1</Tweak>
+				<Tweak name="Settings\IsContinuousInnovationOptedIn">0</Tweak>
+				<Tweak name="7971f918-a847-4430-9279-4a52d1efe18d\RegisterWithAU">0</Tweak>
+				<Tweak name="Settings\RestartNotificationsAllowed2">0</Tweak>
+				<Tweak name="DriverSearching\SearchOrderConfig">0</Tweak>
+				<Tweak name="Settings\IsExpedited">0</Tweak>
+				<Tweak name="AU\AUOptions">2</Tweak>
+				<Tweak name="WindowsUpdate\ExcludeWUDriversInQualityUpdate">1</Tweak>
+				<Tweak name="WindowsUpdate\TargetReleaseVersionInfo">24H2</Tweak>
+				<Tweak name="WindowsStore\AutoDownload">0</Tweak>
+				<Tweak name="AU\NoAutoUpdate">1</Tweak>
+				<Tweak name="Settings\HideMCTLink">1</Tweak>
+				<Tweak name="WindowsUpdate\DisableWUfBSafeguards">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="WindowsUpdateTasks">
+				<Tweak name="CrossDeviceUpdate\CrossDeviceUpdate">0</Tweak>
+				<Tweak name="DevHomeUpdate\DevHomeUpdate">0</Tweak>
+				<Tweak name="EdgeUpdate\EdgeUpdate">0</Tweak>
+				<Tweak name="OutlookUpdate\OutlookUpdate">0</Tweak>
+				<Tweak name="TFLUpdate\TFLUpdate">0</Tweak>
+			</TweakGroup>
 			<TweakGroup name="AutoLogger">
 				<Tweak name="CimFSUnionFS-Filter\Start">0</Tweak>
 				<Tweak name="Circular Kernel Context Logger\Start">0</Tweak>
@@ -284,157 +459,6 @@
 				<Tweak name="WdiContextLog\Start">0</Tweak>
 				<Tweak name="WiFiSession\Start">0</Tweak>
 			</TweakGroup>
-			<TweakGroup name="CrashControl">
-				<Tweak name="CrashControl\AutoReboot">0</Tweak>
-				<Tweak name="CrashControl\EnableLogFile">0</Tweak>
-				<Tweak name="CrashControl\LogEvent">0</Tweak>
-				<Tweak name="CrashControl\CrashDumpEnabled">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="DesktopTweaks">
-				<Tweak name="InprocServer32\"></Tweak>
-				<Tweak name="Personalize\AppsUseLightTheme">0</Tweak>
-				<Tweak name="Personalize\SystemUsesLightTheme">0</Tweak>
-				<Tweak name="Winlogon\EnableGoodbye">0</Tweak>
-				<Tweak name="PushNotifications\ToastEnabled">0</Tweak>
-				<Tweak name="PushNotifications\NoCloudApplicationNotification">1</Tweak>
-				<Tweak name="Mouse\MouseSpeed">0</Tweak>
-				<Tweak name="QuietHours\Enable">0</Tweak>
-				<Tweak name="Advanced\TaskbarMn">0</Tweak>
-				<Tweak name="Dsh\AllowNewsAndInterests">0</Tweak>
-				<Tweak name="Communications\ConfigureChatAutoInstall">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="EventLogs">
-				<Tweak name="Microsoft-Windows-Application-Experience\Program-Telemetry\Enabled">0</Tweak>
-				<Tweak name="Microsoft-Windows-UniversalTelemetryClient\Operational\Enabled">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="Explorer">
-				<Tweak name="AutoplayHandlers\DisableAutoplay">1</Tweak>
-				<Tweak name="Explorer\EnableLegacyBalloonNotifications">0</Tweak>
-				<Tweak name="Advanced\FolderContentsInfoTip">0</Tweak>
-				<Tweak name="Explorer\NoRecentDocsHistory">1</Tweak>
-				<Tweak name="{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}\HiddenByDefault">1</Tweak>
-				<Tweak name="Explorer\NoReadingPane">1</Tweak>
-				<Tweak name=".jpg\PhotoViewer.FileAssoc.Tiff">PhotoViewer.FileAssoc.Tiff</Tweak>
-				<Tweak name="Advanced\ShowSyncProviderNotifications">0</Tweak>
-				<Tweak name="Advanced\ShowTaskViewButton">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="PowerAndShutdown">
-				<Tweak name="Power\HiberbootEnabled">0</Tweak>
-				<Tweak name="FlyoutMenuSettings\ShowHibernateOption">0</Tweak>
-				<Tweak name="FlyoutMenuSettings\ShowLockOption">0</Tweak>
-				<Tweak name="FlyoutMenuSettings\ShowSleepOption">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="Privacy">
-				<Tweak name="appointments\Value">Deny</Tweak>
-				<Tweak name="phoneCallHistory\Value">Deny</Tweak>
-				<Tweak name="contacts\Value">Deny</Tweak>
-				<Tweak name="appDiagnostics\Value">Deny</Tweak>
-				<Tweak name="documentsLibrary\Value">Deny</Tweak>
-				<Tweak name="email\Value">Deny</Tweak>
-				<Tweak name="broadFileSystemAccess\Value">Deny</Tweak>
-				<Tweak name="chat\Value">Deny</Tweak>
-				<Tweak name="userNotificationListener\Value">Deny</Tweak>
-				<Tweak name="phoneCall\Value">Deny</Tweak>
-				<Tweak name="picturesLibrary\Value">Deny</Tweak>
-				<Tweak name="radios\Value">Deny</Tweak>
-				<Tweak name="LooselyCoupled\Value">Deny</Tweak>
-				<Tweak name="userDataTasks\Value">Deny</Tweak>
-				<Tweak name="userAccountInformation\Value">Deny</Tweak>
-				<Tweak name="videosLibrary\Value">Deny</Tweak>
-				<Tweak name="Client\OptInOrOutPreference">0</Tweak>
-				<Tweak name="System\AllowExperimentation">0</Tweak>
-				<Tweak name="System\AllowLocation">0</Tweak>
-				<Tweak name="DataCollection\AllowTelemetry">0</Tweak>
-				<Tweak name="CloudContent\DisableWindowsConsumerFeatures">1</Tweak>
-				<Tweak name="ContentDeliveryManager\SilentInstalledAppsEnabled">0</Tweak>
-				<Tweak name="System\AllowClipboardHistory">0</Tweak>
-				<Tweak name="TrainedDataStore\HarvestContacts">0</Tweak>
-				<Tweak name="InputPersonalization\RestrictImplicitTextCollection">1</Tweak>
-				<Tweak name="InputPersonalization\RestrictImplicitInkCollection">1</Tweak>
-				<Tweak name="Rules\NumberOfSIUFInPeriod">0</Tweak>
-				<Tweak name="SmartGlass\UserAuthPolicy">0</Tweak>
-				<Tweak name="SmartGlass\BluetoothPolicy">0</Tweak>
-				<Tweak name="AdvertisingInfo\Enabled">0</Tweak>
-				<Tweak name="Privacy\TailoredExperiencesWithDiagnosticDataEnabled">0</Tweak>
-				<Tweak name="User Profile\HttpAcceptLanguageOptOut">1</Tweak>
-				<Tweak name="System\EnableActivityFeed">0</Tweak>
-				<Tweak name="Advanced\Start_TrackProgs">0</Tweak>
-				<Tweak name="Advanced\Start_TrackDocs">0</Tweak>
-				<Tweak name="ContentDeliveryManager\SystemPaneSuggestionsEnabled">0</Tweak>
-				<Tweak name="InputPersonalization\AllowInputPersonalization">0</Tweak>
-				<Tweak name="Settings\AcceptedPrivacyPolicy">0</Tweak>
-				<Tweak name="ContentDeliveryManager\PreInstalledAppsEnabled">0</Tweak>
-				<Tweak name="ContentDeliveryManager\OemPreInstalledAppsEnabled">0</Tweak>
-				<Tweak name="AppCompat\DisablePCA">1</Tweak>
-				<Tweak name="Search\BingSearchEnabled">0</Tweak>
-				<Tweak name="SearchSettings\IsDeviceSearchHistoryEnabled">0</Tweak>
-				<Tweak name="TIPC\Enabled">0</Tweak>
-				<Tweak name="System\EnableCdp">0</Tweak>
-				<Tweak name="AccountNotifications\EnableAccountNotifications">0</Tweak>
-				<Tweak name="ContentDeliveryManager\SubscribedContent-338393Enabled">0</Tweak>
-				<Tweak name="ContentDeliveryManager\SubscribedContent-310093Enabled">0</Tweak>
-				<Tweak name="UserProfileEngagement\ScoobeSystemSettingEnabled">0</Tweak>
-				<Tweak name="Settings\InsightsEnabled">0</Tweak>
-				<Tweak name="FlipAhead\FPEnabled">0</Tweak>
-				<Tweak name="WindowsCopilot\TurnOffWindowsCopilot">1</Tweak>
-				<Tweak name="WindowsAI\DisableAIDataAnalysis">1</Tweak>
-				<Tweak name="CloudContent\DisableWindowsSpotlightFeatures">1</Tweak>
-			</TweakGroup>
-			<TweakGroup name="StartTweaks">
-				<Tweak name="Start\HideFrequentlyUsedApps">1</Tweak>
-				<Tweak name="Explorer\HideRecentlyAddedApps">1</Tweak>
-				<Tweak name="Start\AllowPinnedFolderSettings">1</Tweak>
-				<Tweak name="Start\HideHibernate">1</Tweak>
-				<Tweak name="Start\HideSleep">1</Tweak>
-				<Tweak name="Explorer\ShowOrHideMostUsedApps">0</Tweak>
-				<Tweak name="Advanced\Start_IrisRecommendations">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="System">
-				<Tweak name="Appx\AllowAutomaticAppArchiving">0</Tweak>
-				<Tweak name="BitLocker\PreventDeviceEncryption">1</Tweak>
-				<Tweak name="DiskQuota\Enable">0</Tweak>
-				<Tweak name="System\EnableFirstLogonAnimation">0</Tweak>
-				<Tweak name="OneDrive\DisableFileSyncNGSC">1</Tweak>
-				<Tweak name="EMDMgmt\GroupPolicyDisallowCaches">1</Tweak>
-				<Tweak name="LabConfig\BypassTPMCheck">1</Tweak>
-				<Tweak name="System\VerboseStatus">0</Tweak>
-				<Tweak name="DeviceGuard\EnableVirtualizationBasedSecurity">0</Tweak>
-				<Tweak name="WinRE\UninstallWindowsRE">1</Tweak>
-			</TweakGroup>
-			<TweakGroup name="WindowsUpdateTasks">
-				<Tweak name="CrossDeviceUpdate\CrossDeviceUpdate">0</Tweak>
-				<Tweak name="DevHomeUpdate\DevHomeUpdate">0</Tweak>
-				<Tweak name="EdgeUpdate\EdgeUpdate">0</Tweak>
-				<Tweak name="OutlookUpdate\OutlookUpdate">0</Tweak>
-				<Tweak name="TFLUpdate\TFLUpdate">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="UAC">
-				<Tweak name="System\EnableLUA">0</Tweak>
-				<Tweak name="System\FilterAdministratorToken">0</Tweak>
-				<Tweak name="System\EnableInstallerDetection">0</Tweak>
-				<Tweak name="PointAndPrint\RestrictDriverInstallationToAdministrators">0</Tweak>
-				<Tweak name="System\PromptOnSecureDesktop">0</Tweak>
-				<Tweak name="System\ConsentPromptBehaviorAdmin">0</Tweak>
-				<Tweak name="System\ConsentPromptBehaviorUser">0</Tweak>
-				<Tweak name="System\EnableSecureUIAPaths">0</Tweak>
-				<Tweak name="System\EnableVirtualization">0</Tweak>
-			</TweakGroup>
-			<TweakGroup name="WindowsUpdate">
-				<Tweak name="DriverSearching\SearchOrderConfig">0</Tweak>
-				<Tweak name="Preferences\ModelDownloadAllowed">0</Tweak>
-				<Tweak name="Device Metadata\PreventDeviceMetadataFromNetwork">1</Tweak>
-				<Tweak name="Settings\AllowAutoWindowsUpdateDownloadOverMeteredNetwork">0</Tweak>
-				<Tweak name="WindowsUpdate\DisableWUfBSafeguards">1</Tweak>
-				<Tweak name="Settings\IsContinuousInnovationOptedIn">0</Tweak>
-				<Tweak name="7971f918-a847-4430-9279-4a52d1efe18d\RegisterWithAU">0</Tweak>
-				<Tweak name="WindowsUpdate\ExcludeWUDriversInQualityUpdate">1</Tweak>
-				<Tweak name="MRT\DontOfferThroughWUAU">1</Tweak>
-				<Tweak name="Settings\HideMCTLink">1</Tweak>
-				<Tweak name="Settings\IsExpedited">0</Tweak>
-				<Tweak name="Settings\RestartNotificationsAllowed2">0</Tweak>
-				<Tweak name="AU\NoAutoUpdate">1</Tweak>
-				<Tweak name="AU\AUOptions">2</Tweak>
-			</TweakGroup>
 		</Settings>
 		<Services></Services>
 		<ExtraServices></ExtraServices>
@@ -447,7 +471,7 @@
 			<Task>tweaksettings_boot.wim_02_2_64</Task>
 			<Task>imageOptionsCreateIso</Task>
 		</ImageTasks>
-		<AutoIsoFile>C:\Users\Daniel\Desktop\OwlOS 11 (24H2) v0.2.iso</AutoIsoFile>
+		<AutoIsoFile>C:\OwlOS\OwlOS 11 (24H2) v0.3.iso</AutoIsoFile>
 		<AutoIsoLabel>OwlOS</AutoIsoLabel>
 		<AutoSplitSize>4000</AutoSplitSize>
 	</ApplyOptions>
@@ -457,7 +481,7 @@
 		<Add></Add>
 	</Execution>
 	<Registry>
-		<File>C:\OwlOS 11\Disabled services and drivers.reg</File>
-		<File>C:\OwlOS 11\OwlOS 11.reg</File>
+		<File>C:\OwlOS\Disabled services and drivers.reg</File>
+		<File>C:\OwlOS\OwlOS.reg</File>
 	</Registry>
 </Preset>
