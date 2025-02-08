@@ -232,6 +232,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PrintWorkflowUserSvc]
 "Start"=dword:00000003
 
+; Manages the installation of IPP and UP printers.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PrintDeviceConfigurationService]
+"Start"=dword:00000003
+
 ; The service responsible for handling imaging devices such as scanners and cameras.
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\StiSvc]
 "Start"=dword:00000003
@@ -300,6 +304,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SgrmBroker]
 "Start"=dword:00000002
 
+; Monitors and reports security health settings on the computer.
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wscsvc]
+"Start"=dword:00000002
+
 ; Responsible for managing Windows updates, coordinating their download and installation.
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc]
 "Start"=dword:00000002
@@ -310,6 +318,10 @@ Windows Registry Editor Version 5.00
 
 ; Windows Update regularly checks and installs system updates.
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000003
+
+; Allow to install applications of Microsoft Store on other devices remotely.
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PushToInstall]
 "Start"=dword:00000003
 
 ; Allows you to run applications with the permissions of other users.
